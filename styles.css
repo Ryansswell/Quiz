@@ -1,0 +1,26 @@
+header {
+    font-size: 1.75rem;
+    padding: 0;
+}
+
+main {
+  margin: 3rem auto;
+  max-width: 90vw;
+  width: 50ch;
+}
+
+card-header {
+  margin: 3rem auto;
+  font-size: 1.75rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+card-body {
+  margin: 3rem auto;
+  font-size: 1.75rem;
+  padding: 0;
+  list-style-type: none;
+
+}
+
