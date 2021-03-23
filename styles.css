@@ -1,26 +1,85 @@
-header {
-    font-size: 1.75rem;
-    padding: 0;
+*, *::before, *::after {
+  box-sizing: content-box;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-main {
-  margin: 3rem auto;
-  max-width: 90vw;
-  width: 50ch;
+
+body {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  height: 60vw;
+}
+
+
+.container {
+  width: 400px;
+  max-width: 60%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 6px 4px;
+}
+
+.btn-grid {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: teal;
+  border: 2px solid black;
+  padding: 5px 15px;
+  outline: none;
+}
+
+btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  color: black;
+}
+
+
+.btn.wrong {
+
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 15px 7px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display:inline-flexbox;
+}
+
+.hide {
+  display:none;
 }
 
 card-header {
-  margin: 3rem auto;
-  font-size: 1.75rem;
-  padding: 0;
-  list-style-type: none;
+margin: 3rem auto;
+font-size: 1.75rem;
+padding: 0;
+list-style-type: none;
 }
 
 card-body {
-  margin: 3rem auto;
-  font-size: 1.75rem;
-  padding: 0;
-  list-style-type: none;
+margin: 3rem auto;
+font-size: 1.75rem;
+padding: 0;
+list-style-type: none;
 
 }
-

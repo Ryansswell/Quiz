@@ -9,26 +9,35 @@
 </head>
 <body>
     <div>
-        <div class="wrap">
-            <header>
-                <h1>Interactive Code Quiz</h1>
-            </header>
+        <div class="container">
+            <div id="question-container" class="flex-container">
+            <div class="card">
+                 <div class="card-header">
+                        <h2>Code Quiz</h2>
+                </div>
+                <div class="card-body">
+                    <p>Try to answer all the questions as fast as possible before the time runs out. Upon wrong answer you will loose 10 seconds off the time. At the end of the questions your time will be tallied up and you can compare your highscores!</p>
+                </div>
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer1</button>
+                    <button class="btn">Answer2</button>
+                    <button class="btn">Answer3</button>
+                    <button class="btn">Answer4</button>
+                </div>
+            </div>
+            <div class="controls"></div>
+            <button id="start" class="start-btn btn">Start Quiz</button>
+
             <div class="Highscores">
                 <p>View Highscores</p>
             </div>
             <div class="time">
                 <p>Time:</p>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h2>Code Quiz</h2>
-                </div>
-                <div class="card-body">
-                    <p>Try to answer all the questions as fast as possible before the time runs out. Upon wrong answer you will loose 10 seconds off the time. At the end of the questions your time will be tallied up and you can compare your highscores!</p>
-                </div>
+            <!-- </div>
                 <div class="card-footer">
                     <button id="start" class="button">Start Challenge!</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
