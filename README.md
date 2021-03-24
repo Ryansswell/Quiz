@@ -11,4 +11,4 @@ What are the steps required to install your project? Provide a step-by-step desc
 ## Features
 If your project has a lot of features, list them here.
 ## Tests
-This has been tested on W3C markup validator and the link is included on project. 
+This has been tested on W3C markup validator and no errors or warnings to show. 

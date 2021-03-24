@@ -89,8 +89,6 @@ function setTime() {
     }, 1000);
   }
 
-
-
 var Question = [
     {
         question: "Commonly used data types DO NOT include:",
