@@ -6,25 +6,20 @@ var startButton = document.querySelector("#start");
 var questionContainerElement = document.getElementById("question-container")
 var questionElement = document.getElementById("question")
 var answerButtonElement = document.getElementById("answer-buttons")
-
-
 let shuffledQuestions, currentQuestionIndex
+var clock = document.getElementById("clock")
+var secondsLeft = 50;
 
 startButton.addEventListener("click", startGame)
-// nextButton.addEventListener("click", () => {
-//     currentQuestionIndex++
-//     setNextQuestion()
-// })
 
 function startGame() {
     startButton.classList.add("hide")
     shuffledQuestions = Question.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
     questionContainerElement.classList.remove("hide")
     setNextQuestion()
+    setTime();
 }
-
-
+currentQuestionIndex = 0
 
 function setNextQuestion() {
     resetState()
@@ -32,7 +27,6 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-    console.log(question.choices);
     questionElement.innerText = question.question
     question.choices.forEach(answer =>  {
         var button = document.createElement("button")
@@ -48,7 +42,6 @@ function showQuestion(question) {
 
 function resetState() {
     clearStatusClass(document.body)
-    // nextButton.classList.add("hide")
     while (answerButtonElement.firstChild) {
         answerButtonElement.removeChild(answerButtonElement.firstChild)
     }
@@ -63,10 +56,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct)
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-    })
-    // if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    //     nextButton.classList.remove("hide")
-    // }
+    })  
 }
 
 function setStatusClass(element, correct) {
@@ -84,10 +74,21 @@ function clearStatusClass(element) {
 }
 
 
-function startTimer(duration, display) {
-    timer = duration, seconds;
+function setTime() {
+    var timerInterval = setInterval(function() {
+      secondsLeft--;
+      clock.textContent = secondsLeft;
+    
+      if((secondsLeft <= 0) || (currentQuestionIndex >= 5)) {
+        // Stops execution of action at set interval
+        clearInterval(timerInterval);
+        // Calls function to create and append image
+        sendMessage();
+      }
+  
+    }, 1000);
+  }
 
-}
 
 
 var Question = [
@@ -144,46 +145,34 @@ var Question = [
 ];
 
 
+function saveLastInitials() {
+    var highscores = 0;
+  }
 
 
-// startButton.addEventListener("click",function(event) {
-//     startButton.getElementsByClassName.visibility = "hidden";
-//     questionHeader.textContent="";
-//     questionBody.textContent="";
-//     index= Math.floor(Math.random()*myQuestion.length);
+  
 
 
-//     var choices = new Array(myQuestion[index].choices);
-//     console.log(choices[0].a);
-
-//     questionHeader.textContent=(myQuestion[index].question);
-
-//     var A = document.createElement("Button");
-//     A.textContent = choices[0].a;
 
 
-    //for (i=0; i < choices.length; i++) {
-       // var answerChoices = (JSON.parse(choices[i]));
-       // var A = document.createElement("Button");
-        // A.textContent = (JSON.parse(answerChoices).a);
-        // var B = document.createElement("Button");
-        // B.textContent = (JSON.parse(answerChoices).b);
-        // var C = document.createElement("Button");
-        // C.textContent = (JSON.parse(answerChoices).c);
 
-    //     questionBody.appredChild(A);
 
-    //     var br = document.createElement("br");
-    //     questionBody.appendChild(br);
 
-    //     questionBody.appredChild(B);
 
-    //     var br = document.createElement("br");
-    //     questionBody.appendChild(br);
 
-    //     questionBody.appredChild(C);
 
-    //     var br = document.createElement("br");
-    //     questionBody.appendChild(br);
-    // }
-//})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
