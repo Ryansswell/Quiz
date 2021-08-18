@@ -28,9 +28,9 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.choices.forEach(answer =>  {
+    question.choices.forEach(answer => {
         var button = document.createElement("button")
-        button.innerText = answer 
+        button.innerText = answer
         button.classList.add("button")
         if (answer.correct) {
             button.dataset.correct = answer.correct
@@ -56,7 +56,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct)
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-    })  
+    })
 }
 
 function setStatusClass(element, correct) {
@@ -75,68 +75,78 @@ function clearStatusClass(element) {
 
 
 function setTime() {
-    var timerInterval = setInterval(function() {
-      secondsLeft--;
-      clock.textContent = secondsLeft;
-    
-      if((secondsLeft <= 0) || (currentQuestionIndex >= 5)) {
-        // Stops execution of action at set interval
-        clearInterval(timerInterval);
-        // Calls function to create and append image
-        sendMessage();
-      }
-  
+    var timerInterval = setInterval(function () {
+        secondsLeft--;
+        clock.textContent = secondsLeft;
+
+        if ((secondsLeft <= 0) || (currentQuestionIndex >= 5)) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            sendMessage();
+        }
+
     }, 1000);
-  }
+}
 
 var Question = [
     {
         question: "Commonly used data types DO NOT include:",
         choices: [
-             "<strings>",
-             "<booleans>",
-             "<alerts>",
-             "<number>"
+            "<strings>",
+            "<booleans>",
+            "<alerts>",
+            "<number>"
         ],
         correctAnswer: "<alerts>"
     },
     {
         question: "The condition in an if/else statement",
         choices: [
-             "<quotes>",
-             "<curly brackets>",
-             "<parentheses>",
-             "<square brackets>",
-      ],
+            "<quotes>",
+            "<curly brackets>",
+            "<parentheses>",
+            "<square brackets>",
+        ],
         correctAnswer: "<parentheses>"
     },
     {
         question: "Arrays in JavaScript can be used to store _____.",
         choices: [
-             "<numbers and strings>",
-             "<other arrays>",
-             "<booleans>",
-             "<all the above>",
+            "<numbers and strings>",
+            "<other arrays>",
+            "<booleans>",
+            "<all the above>",
         ],
         correctAnswer: "<all the above>"
     },
     {
         question: "String values must be enclosed within ______ when being assigned to variables.",
         choices: [
-             "<commas>",
-             "<curly brackets>",
-             "<quotes>",
-             "<parentheses>",
+            "<commas>",
+            "<curly brackets>",
+            "<quotes>",
+            "<parentheses>",
         ],
         correctAnswer: "<quotes>"
     },
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         choices: [
-             "<JavaScript>",
-             "<Terminal/Bash>",
-             "<for loops>",
-             "<console.log>",
+            "<JavaScript>",
+            "<Terminal/Bash>",
+            "<for loops>",
+            "<console.log>",
+        ],
+        correctAnswer: "<console.log>"
+    },
+    {
+        question: "MERN:",
+        choices: [
+            "Managing External Remote Networking",
+            "Micro Effecient Responsive Node",
+            "MangoDB, Express, REACT, Node",
+            "Modular Remote Network",
         ],
         correctAnswer: "<console.log>"
     }
@@ -145,10 +155,10 @@ var Question = [
 
 function saveLastInitials() {
     var highscores = 0;
-  }
+}
 
 
-  
+
 
 
 
