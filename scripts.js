@@ -91,6 +91,36 @@ function setTime() {
 
 var Question = [
     {
+        question: "Which array method sorts the elements of an array?",
+        choices: [
+            "sort()",
+            "changeOrder(order)",
+            "order()",
+            "None of the above"
+        ],
+        correctAnswer: "sort()"
+    },
+    {
+        question: "Which function is used to load the next URL in the history list?",
+        choices: [
+            "window.history.next()",
+            "window.history.load_next()",
+            "window.history.forward()",
+            "window.history.load_forward()",
+        ],
+        correctAnswer: "window.history.forward()"
+    },
+    {
+        question: "How do you get cookies in JavaScript?",
+        choices: [
+            "window.cookies",
+            "location.cookies",
+            "document.cookie",
+            "document.cookies",
+        ],
+        correctAnswer: "document.cookie"
+    },
+    {
         question: "Commonly used data types DO NOT include:",
         choices: [
             "<strings>",
@@ -109,6 +139,16 @@ var Question = [
             "<square brackets>",
         ],
         correctAnswer: "<parentheses>"
+    },
+    {
+        question: "Which of the following is used for assigning a value to a variable?",
+        choices: [
+            "*",
+            "=",
+            "-",
+            "X",
+        ],
+        correctAnswer: "="
     },
     {
         question: "Arrays in JavaScript can be used to store _____.",
@@ -145,7 +185,7 @@ var Question = [
         choices: [
             "Managing External Remote Networking",
             "Micro Effecient Responsive Node",
-            "MangoDB, Express, REACT, Node",
+            "MongoDB, Express, REACT, Node",
             "Modular Remote Network",
         ],
         correctAnswer: "<console.log>"
