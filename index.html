@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Code Quiz</title>
+    <title>Ryan's Code Quiz</title>
 </head>
 
 <body>
+    <div class="scores"><a href="#">View the Top Scores</a></div>
+    <div class="timer">Time: <span id="time">0</span></div>
     <div class="container">
         <div id="question-container" class="flex-container">
             <div class="card">
@@ -32,14 +34,7 @@
             </div>
             <div class="controls"></div>
             <button id="start" class="start-btn btn">Start Quiz</button>
-            <div class="Highscores">
-                <p>View Highscores</p>
-            </div>
-            <div class="time">
-                <p>Time:
-                    <span id="clock"></span>
-                </p>
-            </div>
+
         </div>
     </div>
     <script src="scripts.js"></script>

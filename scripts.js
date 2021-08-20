@@ -103,10 +103,7 @@ var Question = [
     {
         question: "Which function is used to load the next URL in the history list?",
         choices: [
-            "window.history.next()",
-            "window.history.load_next()",
-            "window.history.forward()",
-            "window.history.load_forward()",
+            "window.history.next()", "window.history.load_next()", "window.history.forward()", "window.history.load_forward()",
         ],
         correctAnswer: "window.history.forward()"
     },
@@ -188,7 +185,7 @@ var Question = [
             "MongoDB, Express, REACT, Node",
             "Modular Remote Network",
         ],
-        correctAnswer: "<console.log>"
+        correctAnswer: "MongoDB, Express, REACT, Node"
     }
 ];
 
