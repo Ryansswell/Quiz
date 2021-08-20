@@ -2,42 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Ryan's Code Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ryan's Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
-    <div class="scores"><a href="#">View the Top Scores</a></div>
-    <div class="timer">Time: <span id="time">0</span></div>
-    <div class="container">
-        <div id="question-container" class="flex-container">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Code Quiz</h2>
-                </div>
-                <div class="card-body">
-                    <p>Try to answer all the questions as fast as possible before the timer runs out. If you get a wrong
-                        answer
-                        you will loose 10 seconds off the time. At the end of the questions your time will be tallied up
-                        and you can compare your highscores!</p>
-                </div>
-                <div id="question">Question</div>
-                <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">Answer1</button>
-                    <button class="btn">Answer2</button>
-                    <button class="btn">Answer3</button>
-                    <button class="btn">Answer4</button>
-                </div>
-            </div>
-            <div class="controls"></div>
-            <button id="start" class="start-btn btn">Start Quiz</button>
-
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div class="timer">Time Left: <span id="time">0</span></div>
+    <div class="wrapper">
+        <div id="start-screen" class="start">
+            <h1>Coding Quiz Trivia! </h1>
+            <p>
+                Answer the following code-related questions within the time
+                limit. Keep in mind that wrong answers will deduct your
+                score/time by ten seconds. See if you can get the highscore!
+            </p>
+            <button id="start">Start Quiz Now!</button>
         </div>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>All Done!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+                Enter Name: <input type="text" id="initials" max="8" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+        <div id="feedback" class="feedback hide"></div>
     </div>
-    <script src="scripts.js"></script>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
 </body>
 
 </html>

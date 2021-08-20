@@ -25,7 +25,8 @@ This has been tested on W3C markup validator and no errors or warnings to show.
 
 ## ScreenShot
 
-![](CodeQuiz.PNG)
+![](CodeQuizImg.PNG)
+![](Highscores-IMG.PNG)
 
 ## Credits
 
